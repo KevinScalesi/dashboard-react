@@ -8,7 +8,7 @@ function BigBox(props)
                 <div className="card-header py-3">
                     <h6 className="m-0 font-weight-bold text-primary">{props.title}</h6>
                 </div>
-                {<props.SubBox />}
+                {<props.SubBox categories={props.categories} />}
             </div>
         </div>
     );

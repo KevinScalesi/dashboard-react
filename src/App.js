@@ -9,6 +9,8 @@ import LastProd from './components/LastProd'
 import Footer from './components/Footer'
 
 function App() {
+
+  let categories = ["Category01","Category02","Category03","Category04","Category05","Category06"]
   return (
     <div className="App">
 
@@ -56,7 +58,7 @@ function App() {
                   <BigBox title="Last product in Data Dase" SubBox={LastProd}/>
 
                   {/* <!-- Categories in DB --> */}
-                  <BigBox title="Categories in Data Base" SubBox={Categories}/> 
+                  <BigBox title="Categories in Data Base" SubBox={Categories} categories={categories}/> 
                 </div>
               </div>
               {/* <!-- /.container-fluid --> */}
