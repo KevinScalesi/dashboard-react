@@ -1,4 +1,5 @@
 import React from 'react'
+import PropsType from 'prop-types'
 
 function SmallBox(props)
 {
@@ -19,6 +20,10 @@ function SmallBox(props)
             </div>
         </div>
     );
+}
+
+SmallBox.propsType ={
+    value: PropsType.number,
 }
 
 export default SmallBox;

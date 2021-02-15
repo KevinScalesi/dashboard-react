@@ -42,23 +42,27 @@ function App() {
                 <div className="row">
 
                   {/* <!-- Amount of Products in DB --> */}
-                  <SmallBox title="Products in Data Base" icon="fa-clipboard-list" value="135"  border="border-left-primary"/>
+                  <SmallBox title="Products in Data Base" icon="fa-clipboard-list" value={135}  border="border-left-primary"/>
 
                   {/* <!-- $$$ of all products in DB --> */}
-                  <SmallBox title=" Amount in products" icon="fa-dollar-sign" value="$546.456" border="border-left-success"/>
+                  <SmallBox title=" Amount in products" icon="fa-dollar-sign" value={546.456} border="border-left-success"/>
                   
                   {/* <!-- Amount of users in DB --> */}
-                  <SmallBox title="Users quantity" icon="fa-user-check" value="38" border="border-left-warning"/>
+                  <SmallBox title="Users quantity" icon="fa-user-check" value={38} border="border-left-warning"/>
   
                 </div>
 
                 {/* <!-- Content Row --> */}
                 <div className="row">
                   {/* <!-- Last Product in DB --> */}
-                  <BigBox title="Last product in Data Dase" SubBox={LastProd}/>
+                  <BigBox title="Last product in Data Dase">
+                    <LastProd />
+                  </BigBox>
 
                   {/* <!-- Categories in DB --> */}
-                  <BigBox title="Categories in Data Base" SubBox={Categories} categories={categories}/> 
+                  <BigBox title="Categories in Data Base">
+                    <Categories categories={categories}/>
+                  </BigBox> 
                 </div>
               </div>
               {/* <!-- /.container-fluid --> */}

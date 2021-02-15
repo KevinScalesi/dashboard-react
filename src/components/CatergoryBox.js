@@ -1,4 +1,5 @@
 import React from 'react'
+import PropsType from 'prop-types'
 
 function CategoryBox(props)
 {
@@ -11,6 +12,10 @@ function CategoryBox(props)
             </div>
         </div>
     );
+}
+
+CategoryBox.propsType = {
+    name: PropsType.string
 }
 
 export default CategoryBox
