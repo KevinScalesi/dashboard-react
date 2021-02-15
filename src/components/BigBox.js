@@ -14,5 +14,9 @@ function BigBox(props)
     );
 }
 
+BigBox.defaultProps = {
+    categories: null
+}
+
 export default BigBox
 
