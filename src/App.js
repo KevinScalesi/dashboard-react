@@ -11,6 +11,26 @@ import Footer from './components/Footer'
 function App() {
 
   let categories = ["Category01","Category02","Category03","Category04","Category05","Category06"]
+  let smallBoxes = [
+    {
+      title: "Products in Data Base",
+      icon: "fa-clipboard-list",
+      value: 135,
+      border: "border-left-primary"
+    },
+    {
+      title: "Amount in products",
+      icon: "fa-dollar-sign",
+      value: "$546.456",
+      border: "border-left-success"
+    },
+    {
+      title: "Users quantity",
+      icon: "fa-user-check",
+      value: 38,
+      border: "border-left-warning"
+    }
+  ]
   return (
     <div className="App">
 
@@ -42,13 +62,13 @@ function App() {
                 <div className="row">
 
                   {/* <!-- Amount of Products in DB --> */}
-                  <SmallBox title="Products in Data Base" icon="fa-clipboard-list" value={135}  border="border-left-primary"/>
-
-                  {/* <!-- $$$ of all products in DB --> */}
-                  <SmallBox title=" Amount in products" icon="fa-dollar-sign" value={546.456} border="border-left-success"/>
-                  
-                  {/* <!-- Amount of users in DB --> */}
-                  <SmallBox title="Users quantity" icon="fa-user-check" value={38} border="border-left-warning"/>
+                  {smallBoxes.map((smallBox,i) =>
+                    <SmallBox key={"smallBox" + i} 
+                      title={smallBox.title}
+                      icon={smallBox.icon}
+                      value={smallBox.value}
+                      border={smallBox.border}
+                    />)}
   
                 </div>
 

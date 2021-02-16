@@ -1,5 +1,5 @@
 import React from 'react'
-import PropsType from 'prop-types'
+import PropType from 'prop-types'
 
 function SmallBox(props)
 {
@@ -22,8 +22,18 @@ function SmallBox(props)
     );
 }
 
-SmallBox.propsType ={
-    value: PropsType.number,
+SmallBox.defaultProp = {
+    title: "Sin titulo",
+    value: "Sin Valor",
+    border: "",
+    icon: "",
+}
+
+SmallBox.propType = {
+    title: PropType.string.isRequired,
+    value: PropType.oneOfType([PropType.number,PropType.string]).isRequired,
+    border: PropType.oneOf(['border-left-primary','border-left-success','border-left-warning']).isRequired,
+    icon: PropType.string.isRequired,
 }
 
 export default SmallBox;
